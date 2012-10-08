@@ -16,6 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "NIPreprocessorMacros.h"
 
 @class NIOperation;
 
@@ -48,7 +49,7 @@ typedef void (^NIOperationDidFailBlock)(NIOperation* operation, NSError* error);
  */
 @interface NIOperation : NSOperation
 
-@property (readwrite, weak) id<NIOperationDelegate> delegate;
+@property (readwrite, ni_weak) id<NIOperationDelegate> delegate;
 @property (readonly, retain) NSError* lastError;
 @property (readwrite, assign) NSInteger tag;
 

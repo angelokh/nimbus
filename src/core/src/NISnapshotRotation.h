@@ -16,6 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "NIPreprocessorMacros.h"
 
 /**
  * An object designed to easily implement snapshot rotation.
@@ -48,7 +49,7 @@
 // Designated initializer.
 - (id)initWithDelegate:(id<NISnapshotRotationDelegate>)delegate;
 
-@property (nonatomic, readwrite, weak) id<NISnapshotRotationDelegate> delegate;
+@property (nonatomic, readwrite, ni_weak) id<NISnapshotRotationDelegate> delegate;
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;

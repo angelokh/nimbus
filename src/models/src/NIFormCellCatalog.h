@@ -61,7 +61,7 @@
 @property (nonatomic, copy) NSString* placeholderText;
 @property (nonatomic, copy) NSString* value;
 @property (nonatomic, assign) BOOL isPassword;
-@property (nonatomic, weak) id<UITextFieldDelegate> delegate;
+@property (nonatomic, ni_weak) id<UITextFieldDelegate> delegate;
 
 @end
 
@@ -83,7 +83,7 @@
 
 @property (nonatomic, copy) NSString* labelText;
 @property (nonatomic, assign) BOOL value;
-@property (nonatomic, weak) id didChangeTarget;
+@property (nonatomic, ni_weak) id didChangeTarget;
 @property (nonatomic, assign) SEL didChangeSelector;
 
 @end
@@ -108,7 +108,7 @@
 @property (nonatomic, assign) float value;
 @property (nonatomic, assign) float minimumValue;
 @property (nonatomic, assign) float maximumValue;
-@property (nonatomic, weak) id didChangeTarget;
+@property (nonatomic, ni_weak) id didChangeTarget;
 @property (nonatomic, assign) SEL didChangeSelector;
 
 @end
@@ -156,7 +156,7 @@
 @property (nonatomic, copy) NSString *labelText;
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, retain) NSArray *segments;
-@property (nonatomic, weak) id didChangeTarget;
+@property (nonatomic, ni_weak) id didChangeTarget;
 @property (nonatomic, assign) SEL didChangeSelector;
 
 @end
@@ -202,8 +202,29 @@
 @property (nonatomic, copy) NSString *labelText;
 @property (nonatomic, retain) NSDate *date;
 @property (nonatomic, assign) UIDatePickerMode datePickerMode;
-@property (nonatomic, weak) id didChangeTarget;
+@property (nonatomic, ni_weak) id didChangeTarget;
 @property (nonatomic, assign) SEL didChangeSelector;
+
+@end
+
+/**
+ * A button form element.
+ *
+ * This element is a button that can be embedded in a form, usually in order to bring up another
+ * controller such as a table view controller with check marks.
+ *
+ * Bound to NIButtonFormElementCell when using the @link TableCellFactory Nimbus cell factory@endlink.
+ *
+ *      @ingroup TableCellCatalog
+ */
+@interface NIButtonFormElement : NIFormElement
+
+// Designated initializer
++ (id)buttonElementWithID:(NSInteger)elementID labelText:(NSString *)labelText tappedTarget:(id)target tappedSelector:(SEL)selector;
+
+@property (nonatomic, copy) NSString* labelText;
+@property (nonatomic, assign) id tappedTarget;
+@property (nonatomic, assign) SEL tappedSelector;
 
 @end
 
@@ -289,5 +310,21 @@
 @interface NIDatePickerFormElementCell : NIFormElementCell <UITextFieldDelegate>
 @property (nonatomic, readonly, retain) UITextField *dateField;
 @property (nonatomic, readonly, retain) UIDatePicker *datePicker;
+@end
+
+/**
+ * The cell sibling to NIButtonFormElement.
+ *
+ * Displays a button occupying all of the cell's width.
+ *
+ * @image html NIButtonFormElementCellExample1.png "Example of a NIButtonFormElementCell."
+ *
+ *      @ingroup TableCellCatalog
+ */
+@interface NIButtonFormElementCell : NIFormElementCell
+
+// Called when this button cell is tapped.
+- (void)buttonWasTapped:(id)sender;
+
 @end
 

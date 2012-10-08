@@ -345,8 +345,6 @@
 		66D2FDC11593F17800B2BEFD /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
 		66D2FDC21593F17800B2BEFD /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
 		66D2FDC31593F17800B2BEFD /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
-		66D2FDC41593F17800B2BEFD /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
-		66D2FDC51593F17800B2BEFD /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
 		66D2FDC61593F17800B2BEFD /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		66D2FDC71593F17800B2BEFD /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		66D2FDC81593F17800B2BEFD /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -802,8 +800,6 @@
 				66D2FDC11593F17800B2BEFD /* AFImageRequestOperation.m */,
 				66D2FDC21593F17800B2BEFD /* AFJSONRequestOperation.h */,
 				66D2FDC31593F17800B2BEFD /* AFJSONRequestOperation.m */,
-				66D2FDC41593F17800B2BEFD /* AFJSONUtilities.h */,
-				66D2FDC51593F17800B2BEFD /* AFJSONUtilities.m */,
 				66D2FDC61593F17800B2BEFD /* AFNetworkActivityIndicatorManager.h */,
 				66D2FDC71593F17800B2BEFD /* AFNetworkActivityIndicatorManager.m */,
 				66D2FDC81593F17800B2BEFD /* AFNetworking.h */,

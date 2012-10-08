@@ -35,7 +35,7 @@
 
 @interface NITableViewActions()
 
-@property (nonatomic, weak) UIViewController* controller;
+@property (nonatomic, ni_weak) UIViewController* controller;
 @property (nonatomic, strong) NSMutableSet* forwardDelegates;
 @property (nonatomic, strong) NSMutableDictionary* objectMap;
 @property (nonatomic, strong) NSMutableSet* objectSet;
